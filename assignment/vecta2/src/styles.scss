@@ -1,0 +1,339 @@
+//import fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//import mixins
+@import "mixins";
+@import "media";
+//variables
+$accent_color:      #E65C43;
+$secondary_color:   #fff;
+$tertiary_color:    #666;
+$greyback_color:    #F5F6F6;
+$footerback_color:  #30353D;
+$font_main:         'Roboto';
+$bg_img:            url('../images/bg.gif');
+$logo:              url('../images/logo.png');
+$footer_social:     url('../images/social-media.png');//bar of 4 icons
+$layout-breakpoint-small: 459px;
+$layout-breakpoint-med: 767px;
+$layout-breakpoint-lg: 959px;
+
+main{
+    width:      940px;
+    margin:     0 auto;
+    padding:    0 10px;
+}
+//Navigation
+figure{ width:  400px;
+        height: 190px;
+        background:$logo no-repeat 0 50px;
+        float:  left;
+        display:block;
+        margin: 0;
+    }
+nav{
+    width:  540px;
+    height: 190px;
+    float: left;
+    text-align: right;
+    ul{
+        list-style-type: none;
+        margin-top: 95px;
+        li{ 
+            display: inline;
+            font-size: 0.8em;
+            margin-right: 10px;
+            a{
+                color:  $accent_color;
+                text-decoration: none;
+                letter-spacing: -0.01em;
+                &:hover{
+                    color:  $secondary_color;
+                }
+            }
+        }
+
+    }
+
+}
+body {
+   
+    background-image:   $bg_img;
+    background-repeat:  repeat-x;
+    margin:             0;
+    font-family:        $font_main;
+    font-size:          1em;
+    line-height:        2em;
+
+    }
+//Header
+header {
+    width:          inherit;
+    clear:          both;
+    text-align:     center;
+    padding-top:    40px;
+
+    img {
+        max-width:  100%;
+        height:     auto;
+    }
+    h1{
+        color:      $accent_color;
+        font-weight: 100;
+        font-size:  4em;
+        line-height: 0;
+    }
+    h2{
+        color:      $secondary_color;
+        font-weight:900;
+        font-size:  2.5em;
+        line-height:0;
+        margin-bottom: 70px;
+    }
+    h3{
+        color: $tertiary_color;
+        font-weight:400;
+        font-size:2em;
+        line-height:0;
+        margin-bottom:50px;
+    }
+        
+}
+//CONTENT
+#headline {
+    width:      100%;
+    height:     130px;
+    background:#F25C43;
+    text-align: center;
+    margin:     0 auto;
+
+    h1{
+        color:      $secondary_color;
+        font-size:  2.5em;
+        font-weight:100;
+        padding-top:50px;
+    }
+}
+#content{
+    width:940px;
+    margin:20px auto;
+
+    h3{
+        color:      $tertiary_color;
+        font-size:  2em;
+        font-weight:400;
+    }
+    #products{
+        width:460px;
+        float:left;
+        img{
+            float:left;
+            margin-right:20px;
+        }
+        article{
+            margin-bottom:40px;
+        }
+        h4{
+            line-height:1em;
+        }
+    }
+    #testimonials{
+        width:460px;
+        float:right;
+    }
+}
+//FOOTER
+.greybar{
+    width:100%;
+    height:90px;
+    background:$greyback_color;
+    clear:both;
+    padding-top:30px;
+}
+footer{
+    width:      100%;
+    height:     120px;
+    background: $footerback_color;
+    text-align: center;
+    color:      $secondary_color;
+    padding-top:50px;
+}
+.social-media{
+    margin:     0 auto;
+    width:      165px;
+    div{
+        float:left;
+        margin-right:5px;
+        // .one{
+        //     background: $footer_social 0 0;
+        // }
+        // .two{
+        //     background: $footer_social -38px 0;
+        // }
+        // .three{
+        //     background: $footer_social -76px 0;
+        // }
+        // .four{
+        //     background: $footer_social -114px 0;
+        // }
+
+    }
+    div.one{
+        background: $footer_social 0 0;
+    }
+    div.two{
+        background: $footer_social -38px 0;
+    }
+    div.three{
+        background: $footer_social -76px 0;
+    }
+    div.four{
+        background: $footer_social -114px 0;
+    }
+    a{
+        display:    block;
+        width:      36px;
+        height:     36px;
+        text-indent:-9999px;
+    }
+
+
+}
+@media (max-width: $layout-breakpoint-lg) {
+    main{
+        width:768px;
+    }
+    figure{
+        width:inherit;
+        height:140px;
+        float:none;
+        background-position:center;
+    }
+    nav{
+        width:inherit;
+        height:50px;
+        float:none;
+        text-align:center;
+    
+        ul{
+            margin-top:0;
+            li{
+                font-size:1em;
+                margin:0 10px;
+            }
+        }
+    }
+    header{
+         h1{
+            font-size:3em;
+        }
+         h2{
+            font-size:1.5em;
+        }
+    }
+    #content{
+        width:inherit;
+        #products, #testimonials{
+        width:46%;
+        margin:0 2%;}
+    }
+}
+
+@media (max-width:$layout-breakpoint-med) {
+    main{
+        width:460px;
+    }
+    nav ul li{
+        font-size:0.8em;
+        margin:0 5px;
+    }
+    header{
+        h1{
+            font-size:2em;
+        }
+        h2{
+            font-size:1em;
+        }
+        h3{
+            font-size:1.5em;
+        }
+        img{
+            margin-bottom:100px;
+        }
+    }
+    #headline h1{
+        font-size:2em;
+        padding-top:50px;
+    }
+    #content{ 
+        #products, #testimonials{
+        width:96%;
+        margin:0 2%;
+        float:none;
+        }
+    
+    }
+}
+@media (max-width: $layout-breakpoint-small){
+    main{
+        width:300px;
+    }
+    figure{
+        background-size: contain;
+    }
+    nav{
+        margin-bottom: 40px !important;
+
+    }
+    select{
+        width:95%;
+    }
+    #headline h1{
+        font-size:1.5em;
+        padding-top:30px;
+    }
+    header{
+        img{
+            margin-bottom:80px;
+        }
+        h1:first-child{
+            font-size:1.4em;
+            margin-bottom:20px;
+        }
+        h2{
+            font-size:1.4em;
+        }
+        h3{
+            color:#FFF;
+            font-size:1em;
+        }
+
+    }
+    #content h3{
+        font-size:1.6em;
+    }
+    .greybar{
+        display:none;
+    }
+    article img{
+        display:none;
+    }
+    footer{
+        text-align:center;
+        p{
+        float:none;
+        margin:0;
+        }
+        img{
+        float:none;
+        margin:0;
+    }
+    }
+
+
+}
+
+    
+
+
+
+
