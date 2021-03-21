@@ -3,19 +3,19 @@
 //import mixins
 @import "mixins";
 @import "media";
-//variables
-$accent_color:      #E65C43;
-$secondary_color:   #fff;
-$tertiary_color:    #666;
-$greyback_color:    #F5F6F6;
-$footerback_color:  #30353D;
-$font_main:         'Roboto';
-$bg_img:            url('../images/bg.gif');
-$logo:              url('../images/logo.png');
-$footer_social:     url('../images/social-media.png');//bar of 4 icons
-$layout-breakpoint-small: 459px;
-$layout-breakpoint-med: 767px;
-$layout-breakpoint-lg: 959px;
+// //variables
+// $accent_color:      #E65C43;
+// $secondary_color:   #fff;
+// $tertiary_color:    #666;
+// $greyback_color:    #F5F6F6;
+// $footerback_color:  #30353D;
+// $font_main:         'Roboto';
+// $bg_img:            url('../images/bg.gif');
+// $logo:              url('../images/logo.png');
+// $footer_social:     url('../images/social-media.png');//bar of 4 icons
+// $layout-breakpoint-small: 459px;
+// $layout-breakpoint-med: 767px;
+// $layout-breakpoint-lg: 959px;
 
 main{
     width:      940px;
@@ -279,10 +279,6 @@ footer{
     }
     figure{
         background-size: contain;
-    }
-    nav{
-        margin-bottom: 40px !important;
-
     }
     select{
         width:95%;
